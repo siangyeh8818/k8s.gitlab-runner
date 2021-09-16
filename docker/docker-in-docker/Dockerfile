@@ -3,11 +3,11 @@ FROM docker:19.03.13-dind
 RUN apk update \
     &&  apk add bash git curl wget
 RUN adduser -S -G dockremap gitlab-runner
-RUN wget https://get.helm.sh/helm-v3.2.1-linux-amd64.tar.gz \
-    && tar zxvf helm-v3.2.1-linux-amd64.tar.gz \
+RUN wget https://get.helm.sh/helm-v3.6.3-linux-amd64.tar.gz \
+    && tar zxvf helm-v3.6.3-linux-amd64.tar.gz \
     && cp linux-amd64/helm /usr/local/bin/ \
     && cp linux-amd64/helm /usr/bin/ \
-    && rm -rf helm-v3.2.1-linux-amd64.tar.gz \
+    && rm -rf helm-v3.6.3-linux-amd64.tar.gz \
     && rm -rf linux-amd64
 
 
